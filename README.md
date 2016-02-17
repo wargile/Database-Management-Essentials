@@ -1,2 +1,2 @@
 # Database-Management-Essentials
-## by [Wut Hmone Hnin Hlaing] (https://www.wuthmonehninhlaing.blogspot.com/)
+## by [Wut Hmone Hnin Hlaing] (http://www.wuthmonehninhlaing.blogspot.com/)
