@@ -26,26 +26,26 @@ CONSTRAINT StudentPk PRIMARY KEY (StdNo) );
 -------------------- Course --------------------------------
 
 CREATE TABLE Course(
-CourseNo	char(6) not null,
-crsDesc		varchar(50) not null,
-CrsUnits	integer,
+CourseNo  char(6) not null,
+crsDesc	 varchar(50) not null,
+CrsUnits integer,
 CONSTRAINT CoursePK PRIMARY KEY (CourseNo) );
 
 
 -------------------- Faculty --------------------------------
 
 CREATE TABLE Faculty(
-FacNo			char(11) not null,
-FacFirstName	varchar(30) not null,
-FacLastName		varchar(30) not null,
-FacCity			varchar(30) not null,
-FacState		char(2) not null,
-FacZipCode		char(10) not null,
-FacRank			char(4),
-FacHireDate		date,
-FacSalary		decimal(10,2),
-FacSupervisor	char(11),
-FacDept			char(6),
+FacNo        char(11) not null,
+FacFirstName varchar(30) not null,
+FacLastName	 varchar(30) not null,
+FacCity		 varchar(30) not null,
+FacState	 char(2) not null,
+FacZipCode	 char(10) not null,
+FacRank	 	 char(4),
+FacHireDate  date,
+FacSalary	 decimal(10,2),
+FacSupervisor char(11),
+FacDept	      char(6),
 CONSTRAINT FacultyPK PRIMARY KEY (FacNo) );
 
 
@@ -68,9 +68,9 @@ CONSTRAINT FacultyFK FOREIGN KEY (FacNo) REFERENCES Faculty (FacNo) );
 -------------------- Enrollment --------------------------------
 
 CREATE TABLE Enrollment (
-OfferNo		INTEGER not null,
-StdNo		char(11) not null,
-EnrGrade	decimal(3,2),
+OfferNo	 INTEGER not null,
+StdNo	 char(11) not null,
+EnrGrade decimal(3,2),
 CONSTRAINT EnrollmentPK PRIMARY KEY (OfferNo, StdNo),
 CONSTRAINT OfferingFK FOREIGN KEY (OfferNo) REFERENCES Offering (OfferNo)
 ON DELETE CASCADE,
